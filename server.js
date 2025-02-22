@@ -36,7 +36,7 @@ app.post("/chat", async (req, res) => {
 
     // Create the response using generateText
     const { text } = await generateText({
-      model: openai("gpt-4o"),
+      model: openai("gpt-4o-mini"),
       system: systemPrompt,
       tools: { ...pica.oneTool },
       prompt: messages[messages.length - 1].content, // Get the last message
